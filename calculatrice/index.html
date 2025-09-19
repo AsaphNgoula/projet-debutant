@@ -7,17 +7,20 @@
     <title>calculatrice</title>
 </head>
 <body>
+    <header>
     <h1>Ma calculatrice</h1>
+    </header>
+    <nav>
     <div class="calculatrice">
         <input type="texte" id="ecran" placeholder="0">
         <div class="touche">
         <button>7</button><button>8</button><button>9</button><button class="operateur">/</button>
         <button>4</button><button>5</button><button>6</button><button class="operateur">*</button>
         <button>3</button><button>2</button><button>1</button><button class="operateur">-</button>
-        <button>0</button><button>C</button><button>=</button><button class="operateur">+</button>
+        <button>0</button><button>del</button><button>=</button><button class="operateur">+</button>
         </div>
     </div>
-   
+   </nav>
 <script>
 const ecran = document.getElementById('ecran');
 const boutons = document.querySelectorAll('button');
@@ -27,7 +30,7 @@ boutons.forEach(bouton => {
     const valeur = bouton.textContent;
     if (valeur === '=') {
       ecran.value = eval(ecran.value); 
-    } else if (valeur === 'C') {
+    } else if (valeur === 'del') {
       ecran.value = '';
     } else {
       ecran.value += valeur;

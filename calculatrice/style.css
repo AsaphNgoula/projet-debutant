@@ -1,0 +1,77 @@
+
+.calculatrice {
+    max-width: 360px;       
+    width: 90%;                 
+    margin: 50px auto;          
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Écran de la calculatrice */
+#ecran {
+    width: 365px;
+    height: 80px;
+    background-color: rgba(238, 245, 240, 0.8);
+    border-radius: 5px;
+    text-align: right;
+    font-size: 2rem;           
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+
+.touche {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Style des boutons */
+.touche  button{
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.operateur {
+    background-color: rgb(223, 223, 136);
+}
+
+
+body {
+    background: linear-gradient(90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
+    );
+        
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 400px) {
+    #ecran {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+
+    .touche button {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
