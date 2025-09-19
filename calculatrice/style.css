@@ -32,11 +32,10 @@
 /* Style des boutons */
 .touche  button{
     width: 100%;
-    padding: 20px 0;
+    padding: 20px ;
     font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
-    user-select: none;
 }
 
 
@@ -64,7 +63,7 @@ h1 {
 }
 
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     #ecran {
         font-size: 1.5rem;
         height: 60px;
