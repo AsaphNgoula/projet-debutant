@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  .zone {
+    position: relative;
+    width: 400px; height: 300px;
+    margin: 40px auto;
+    border: 2px solid #333;
+  }
+  #fuyant {
+    position: absolute;
+    padding: 10px 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="zone">
+    <button id="fuyant">me voici</button>
+  </div>
+
+<script>
+const zone = document.querySelector('.zone');
+const btn  = document.getElementById('fuyant');
+
+// au départ, place le bouton au centre
+btn.style.left = (zone.clientWidth - btn.offsetWidth)/2 + 'px';
+btn.style.top  = (zone.clientHeight - btn.offsetHeight)/2 + 'px';
+
+// quand la souris touche le bouton, le déplacer ailleurs
+btn.onmouseenter = () => {
+  const x = Math.random() * (zone.clientWidth - btn.offsetWidth);
+  const y = Math.random() * (zone.clientHeight - btn.offsetHeight);
+  btn.style.left = x + 'px';
+  btn.style.top  = y + 'px';
+};
+</script>
+</body>
+</html>
