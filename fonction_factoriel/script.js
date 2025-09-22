@@ -1,9 +1,9 @@
-function fact(n){
-    if(n === 0 || n === 1){
-        return 1;
-    }
-    else{
-        return n*fact(n-1)
-    }
+function factoriel(n) {
+  if (n <= 1) {
+    return 1;
+  }
+  return n * factoriel(n - 1);
 }
-console.log(fact(8))
+
+// Exemple
+console.log(factoriel(5)); 

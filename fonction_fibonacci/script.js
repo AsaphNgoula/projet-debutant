@@ -1,7 +1,9 @@
-function fibo(n){
-    if(n > 0){
-        console.log("hello word")
-        fibo(n-1)
-    }
+function fibonacci(n) {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
-fibo(5)
+
+// Exemple d'utilisation
+console.log(fibonacci(6)); 
